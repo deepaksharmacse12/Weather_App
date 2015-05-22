@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "App";
+}
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="~/Styles/WeatherStyle.css">
+<script src="~/Scripts/Internal/WeatherWidget.js"></script>
+<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+<div id='mapDiv' style="position: relative; width: 750px; height: 750px;"></div>
+<input id="txtQuery" type="text" value="" placeholder="Enter City.." />
+<input id="submit" type="button" value="Submit" />
+<table class="myTable">
+    <tr>
+        <th>Location</th>
+        <th>Current Weather</th>
+    </tr>
+    <tr>
+        <td>
+            <div id="location"></div>
+        </td>
+        <td>
+            <div id="weatherNow"></div>
+        </td>
+
+    </tr>
+</table>
+<table class="ForeCastTable">
+    <tr>
+        @for (int i = 1; i <= 5; i++)
+        { 
+            <th id='@("day" + i)'>Day @(i) Forecast</th>
+        }
+
+    </tr>
+    <tr>
+        @for (int i = 1; i <= 5; i++)
+        {
+            <td>
+                <div id = "@("day" + i + "div")"></div>
+            </td>
+        }
+    </tr>
+</table>
