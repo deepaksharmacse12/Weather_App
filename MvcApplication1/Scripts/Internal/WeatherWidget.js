@@ -21,7 +21,7 @@ $(document).ready(function () {
 });
 function GetMap() {
     // Initialize the map
-    map = new Microsoft.Maps.Map($("#mapDiv")[0], { credentials: "AkXIZ2MIAbgoteGb6PSj9R1LsmFX-zCIlT6DY1FrLWbQsPXStxOMUSoNJzprQhHg", mapTypeId: Microsoft.Maps.MapTypeId.road });
+    map = new Microsoft.Maps.Map($("#mapDiv")[0], { credentials: "Your BING map key", mapTypeId: Microsoft.Maps.MapTypeId.road });
 }
 
 function ClickGeocode(credentials) {
